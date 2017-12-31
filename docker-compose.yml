@@ -8,7 +8,7 @@ services:
     volumes:
       - db:/var/lib/mysql
     environment:
-      - MYSQL_ROOT_PASSWORD=
+      - MYSQL_ROOT_PASSWORD=nextcloud
     env_file:
       - db.env
 
@@ -36,8 +36,8 @@ services:
       - nextcloud:/var/www/html:ro
     environment:
       - VIRTUAL_HOST=
-      - LETSENCRYPT_HOST=
-      - LETSENCRYPT_EMAIL=
+      - LETSENCRYPT_HOST=maria.duckdns.org
+      - LETSENCRYPT_EMAIL=maneamihaimmx@gmail.com
     depends_on:
       - app
     networks:
